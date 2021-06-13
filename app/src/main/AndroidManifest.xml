@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.luvitale.tpandroidsoa">
+    package="ar.edu.unlam.tpandroidsoa">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".PatternActivity"
+            android:name="ar.edu.unlam.tpandroidsoa.PatternActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,13 +19,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UnlockActivity"
+            android:name="ar.edu.unlam.tpandroidsoa.UnlockActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".SessionActivity"
+            android:name="ar.edu.unlam.tpandroidsoa.SessionActivity"
             android:screenOrientation="portrait">
-        >
         </activity>
     </application>
 

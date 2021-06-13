@@ -1,10 +1,12 @@
-package com.luvitale.tpandroidsoa;
+package ar.edu.unlam.tpandroidsoa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
+
+import ar.edu.unlam.tpandroidsoa.R;
 
 public class SessionActivity extends AppCompatActivity {
 

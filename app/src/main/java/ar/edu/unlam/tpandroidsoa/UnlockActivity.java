@@ -1,4 +1,4 @@
-package com.luvitale.tpandroidsoa;
+package ar.edu.unlam.tpandroidsoa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.andrognito.patternlockview.PatternLockView;
 import com.andrognito.patternlockview.listener.PatternLockViewListener;
 import com.andrognito.patternlockview.utils.PatternLockUtils;
+import ar.edu.unlam.tpandroidsoa.R;
 
 import java.util.List;
 

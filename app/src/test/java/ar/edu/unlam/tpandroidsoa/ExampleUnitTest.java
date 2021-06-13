@@ -1,4 +1,4 @@
-package com.luvitale.tpandroidsoa;
+package ar.edu.unlam.tpandroidsoa;
 
 import org.junit.Test;
 
