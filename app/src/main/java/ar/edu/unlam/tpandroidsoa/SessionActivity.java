@@ -1,6 +1,7 @@
 package ar.edu.unlam.tpandroidsoa;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,10 +20,7 @@ public class SessionActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK ) {
-            Intent intent = new Intent(SessionActivity.this, PatternActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.putExtra("EXIT", true);
-            startActivity(intent);
+            ActivityCompat.finishAffinity(this);
         }
         return super.onKeyDown(keyCode, event);
     }

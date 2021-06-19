@@ -25,8 +25,6 @@ public class PatternActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        defineExit();
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pattern);
 
@@ -107,13 +105,6 @@ public class PatternActivity extends AppCompatActivity {
             @Override
             public void onCleared() {}
         });
-    }
-
-    private void defineExit() {
-        if (getIntent().getBooleanExtra("EXIT", false)) {
-            finish();
-            return;
-        }
     }
 
 }
