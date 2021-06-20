@@ -9,23 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name="ar.edu.unlam.tpandroidsoa.PatternActivity"
-            android:screenOrientation="portrait">
+        <activity android:name=".UnlockActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="ar.edu.unlam.tpandroidsoa.UnlockActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name="ar.edu.unlam.tpandroidsoa.SessionActivity"
-            android:screenOrientation="portrait">
-        </activity>
+        <activity android:name=".PatternActivity"></activity>
+        <activity android:name=".SessionActivity"></activity>
     </application>
 
 </manifest>
