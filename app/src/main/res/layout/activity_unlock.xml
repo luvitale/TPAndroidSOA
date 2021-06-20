@@ -14,4 +14,14 @@
         android:layout_centerInParent="true"
     />
 
+    <CheckBox
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/change_pattern_checkbox"
+        android:textAllCaps="false"
+        android:id="@+id/changePatternCheckbox"
+        android:layout_below="@+id/pattern_lock_view"
+        android:layout_centerInParent="true"
+    />
+
 </RelativeLayout>

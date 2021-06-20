@@ -6,6 +6,7 @@ import androidx.core.app.ActivityCompat;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 import com.andrognito.patternlockview.PatternLockView;
@@ -52,7 +53,12 @@ public class UnlockActivity extends AppCompatActivity {
 
                 if (finalPattern.equals(sharedPreferences.getPattern())) {
                     Toast.makeText(UnlockActivity.this, "Patrón ingresado correctamente", Toast.LENGTH_SHORT).show();
-                    startSessionActivity();
+                    if (changePatternCheckboxIsChecked()) {
+                        startChangePatternActivity();
+                    }
+                    else {
+                        startSessionActivity();
+                    }
                 }
 
                 else {
@@ -74,6 +80,17 @@ public class UnlockActivity extends AppCompatActivity {
 
     private void startInitialActivity() {
         Intent intent = new Intent(UnlockActivity.this, InitialActivity.class);
+        startActivity(intent);
+    }
+
+    private boolean changePatternCheckboxIsChecked() {
+        CheckBox changePatternCheckbox = (CheckBox) findViewById(R.id.changePatternCheckbox);
+
+        return changePatternCheckbox.isChecked();
+    }
+
+    private void startChangePatternActivity() {
+        Intent intent = new Intent(UnlockActivity.this, ChangePatternActivity.class);
         startActivity(intent);
     }
 

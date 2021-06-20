@@ -1,11 +1,9 @@
 package ar.edu.unlam.sinaliento;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -16,7 +14,7 @@ import com.andrognito.patternlockview.utils.PatternLockUtils;
 
 import java.util.List;
 
-public class PatternActivity extends AppCompatActivity {
+public class CreatePatternActivity extends AppCompatActivity {
 
     String finalPattern = "";
     PatternLockView mPatternLockView;
@@ -25,7 +23,7 @@ public class PatternActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pattern);
+        setContentView(R.layout.activity_create_pattern);
     }
 
     @Override
@@ -66,14 +64,14 @@ public class PatternActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sharedPreferences.setPattern(finalPattern);
-                Toast.makeText(PatternActivity.this, "Patrón guardado con éxito", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CreatePatternActivity.this, "Patrón guardado con éxito", Toast.LENGTH_SHORT).show();
                 startUnlockActivity();
             }
         });
     }
 
     private void startUnlockActivity() {
-        Intent intent = new Intent(PatternActivity.this, UnlockActivity.class);
+        Intent intent = new Intent(CreatePatternActivity.this, UnlockActivity.class);
         startActivity(intent);
     }
 

@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class InitialActivity extends AppCompatActivity {
 
@@ -49,7 +48,7 @@ public class InitialActivity extends AppCompatActivity {
     }
 
     private void startPatternActivity() {
-        Intent intent = new Intent(InitialActivity.this, PatternActivity.class);
+        Intent intent = new Intent(InitialActivity.this, CreatePatternActivity.class);
         startActivity(intent);
     }
 
