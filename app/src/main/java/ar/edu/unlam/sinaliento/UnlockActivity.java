@@ -24,13 +24,15 @@ public class UnlockActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unlock);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
         if (sharedPreferences.patternExists()) {
             checkPattern();
-        }
-
-        else {
-            startPatternActivity();
+        } else {
+            startInitialActivity();
         }
     }
 
@@ -70,8 +72,8 @@ public class UnlockActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void startPatternActivity() {
-        Intent intent = new Intent(UnlockActivity.this, PatternActivity.class);
+    private void startInitialActivity() {
+        Intent intent = new Intent(UnlockActivity.this, InitialActivity.class);
         startActivity(intent);
     }
 

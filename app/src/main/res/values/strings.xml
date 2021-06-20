@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Sin aliento</string>
+    <string name="savePatternText">Guardar patrón</string>
+    <string name="patternAlertText">
+        Se requiere definir un patrón de desbloqueo a continuación.\n\n
+        Es necesario recordarlo ya que será solicitado al ingresar a la aplicación para asegurar una mayor seguridad.\n\n
+        En caso de olvidarlo, es posible desinstalar y volver a instalar la aplicación para establecer uno nuevo.
+    </string>
+    <string name="acceptButtonText">Aceptar</string>
 </resources>

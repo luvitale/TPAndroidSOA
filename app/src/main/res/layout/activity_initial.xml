@@ -5,28 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="ar.edu.unlam.sinaliento.PatternActivity">
+    tools:context=".InitialActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.andrognito.patternlockview.PatternLockView
-            android:id="@+id/pattern_lock_view"
-            android:layout_width="280dp"
-            android:layout_height="280dp"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="320dp"
+            android:background="@color/white"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-        />
+            android:text="@string/patternAlertText"
+            android:textColor="@color/colorPrimaryDark" />
 
         <Button
-            android:layout_height="wrap_content"
+            android:id="@+id/btnAcceptCreatePattern"
             android:layout_width="wrap_content"
-            android:text="@string/savePatternText"
-            android:textAllCaps="false"
-            android:id="@+id/btnSaveUnlockPattern"
-            android:layout_below="@+id/pattern_lock_view"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="32dp"
+            android:background="@color/white"
+            android:text="@string/acceptButtonText"
             android:layout_centerInParent="true"
-        />
+            android:textColor="#AA2222" />
 
     </RelativeLayout>
 

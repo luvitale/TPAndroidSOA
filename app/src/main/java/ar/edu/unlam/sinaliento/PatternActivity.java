@@ -5,7 +5,6 @@ import androidx.core.app.ActivityCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -27,14 +26,16 @@ public class PatternActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pattern);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
         if (sharedPreferences.patternExists()) {
-            Log.d("PatternActivity", "UnlockActivity");
             startUnlockActivity();
         }
 
         else {
-            Log.d("PatternActivity", "ListenPattern");
             listenPattern();
             listenButtonToSave();
         }
@@ -74,14 +75,6 @@ public class PatternActivity extends AppCompatActivity {
     private void startUnlockActivity() {
         Intent intent = new Intent(PatternActivity.this, UnlockActivity.class);
         startActivity(intent);
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK ) {
-            ActivityCompat.finishAffinity(this);
-        }
-        return super.onKeyDown(keyCode, event);
     }
 
 }
