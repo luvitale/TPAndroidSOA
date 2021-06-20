@@ -3,10 +3,15 @@ package ar.edu.unlam.sinaliento;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.BatteryManager;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.CheckBox;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.andrognito.patternlockview.PatternLockView;
@@ -21,6 +26,15 @@ public class UnlockActivity extends AppCompatActivity {
     PatternLockView mPatternLockView;
     MySharedPreferences sharedPreferences = MySharedPreferences.getSharedPreferences(this);
 
+    private TextView batteryTxt;
+    private BroadcastReceiver mBatInfoReceiver = new BroadcastReceiver(){
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
+            batteryTxt.setText("Batería: " + String.valueOf(level) + "%");
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +44,15 @@ public class UnlockActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
         if (sharedPreferences.patternExists()) {
             checkPattern();
-        } else {
+
+            batteryTxt = (TextView) this.findViewById(R.id.batteryTxt);
+            this.registerReceiver(this.mBatInfoReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+        }
+
+        else {
             startInitialActivity();
         }
     }
