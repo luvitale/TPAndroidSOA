@@ -4,7 +4,7 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
     defaultConfig {
-        applicationId "ar.edu.unlam.tpandroidsoa"
+        applicationId "ar.edu.unlam.sinaliento"
         minSdkVersion 15
         targetSdkVersion 30
         versionCode 1

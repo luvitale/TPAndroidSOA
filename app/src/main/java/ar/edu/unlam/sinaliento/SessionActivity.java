@@ -1,13 +1,12 @@
-package ar.edu.unlam.tpandroidsoa;
+package ar.edu.unlam.sinaliento;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
-import ar.edu.unlam.tpandroidsoa.R;
+import ar.edu.unlam.sinaliento.R;
 
 public class SessionActivity extends AppCompatActivity {
 
