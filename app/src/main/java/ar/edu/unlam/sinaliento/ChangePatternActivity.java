@@ -24,6 +24,11 @@ public class ChangePatternActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_pattern);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 
         listenPattern();
         listenButtonToSave();
